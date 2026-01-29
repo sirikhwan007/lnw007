@@ -119,6 +119,8 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'Operator') {
             const sidebar = document.querySelector(".sidebar-operator");
             const btnHamburger = document.querySelector(".btn-hamburger");
             // ควยยยยยยยยยย
+            //kk
+
             if (btnHamburger) {
                 btnHamburger.addEventListener("click", () => {
                     sidebar.classList.toggle("active");
