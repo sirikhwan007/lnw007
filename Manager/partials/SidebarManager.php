@@ -36,28 +36,28 @@ $uploadPath = $_SESSION['upload_path'] ?? '/factory_monitoring/manager/uploads/'
         <ul class="sb-ul">
 
             <li>
-                <a href="/factory_monitoring/manager/dashboard.php">
+                <a href="/factory_monitoring/Manager/dashboard.php">
                     <i class="fas fa-chart-line fontawesome"></i>
                     <span class="sb-text">Dashboard</span>
                 </a>
             </li>
 
             <li>
-                <a href="/factory_monitoring/manager/machines_status.php">
+                <a href="/factory_monitoring/Manager/machines_status.php">
                     <i class="fas fa-industry fontawesome"></i>
                     <span class="sb-text">สถานะเครื่องจักร</span>
                 </a>
             </li>
 
             <li>
-                <a href="/factory_monitoring/manager/downtime.php">
+                <a href="/factory_monitoring/Manager/downtime.php">
                     <i class="fas fa-stopwatch fontawesome"></i>
                     <span class="sb-text">Downtime / OEE</span>
                 </a>
             </li>
 
             <li>
-                <a href="/factory_monitoring/manager/history_manager.php">
+                <a href="/factory_monitoring/Manager/history_manager.php">
                     <i class="fas fa-screwdriver-wrench fontawesome"></i>
                     <span class="sb-text">ประวัติการแจ้งซ่อม</span>
                 </a>
