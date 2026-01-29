@@ -1,0 +1,203 @@
+/* ===============================
+    GENERAL & FONT SETTINGS
+   ================================ */
+:root {
+    --sidebar-bg: #1e1e2f;
+    --sidebar-width: 260px;
+    --accent-color: #8e44ad;
+    --text-color: #ffffff;
+    --text-muted: #cfcfe3;
+}
+
+.sidebar-operator {
+    font-family: "Segoe UI", Tahoma, "Kanit", sans-serif;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: var(--sidebar-width);
+    height: 100vh;
+    background: var(--sidebar-bg);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+/* ===============================
+    TOP SECTION (PROFILE)
+   ================================ */
+.op-top {
+    padding: 20px 15px;
+}
+
+.op-profile-btn {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    margin-bottom: 30px;
+}
+
+.op-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.op-profile-img {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--accent-color);
+}
+
+.op-profile-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.op-profile-name {
+    font-weight: 600;
+    font-size: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.op-profile-role {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+/* ===============================
+    MENU NAVIGATION
+   ================================ */
+.op-ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.op-ul li {
+    margin-bottom: 8px;
+}
+
+.op-ul a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 14px;
+    border-radius: 10px;
+    color: #dcdcff;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+/* hover (ไม่ทับ active) */
+.op-ul li:not(.active) a:hover {
+    background: var(--accent-color);
+    color: #ffffff;
+}
+
+/* ===============================
+    ACTIVE MENU (หน้าที่เลือกอยู่)
+   ================================ */
+.op-ul li.active a {
+    background: linear-gradient(135deg, #7b3fe4, #9b5cff);
+    color: #ffffff;
+    box-shadow: 0 6px 18px rgba(142, 68, 173, 0.4);
+    position: relative;
+}
+
+.op-ul li.active i {
+    color: #ffffff;
+}
+
+/* เส้นเน้นด้านซ้าย (สไตล์ Dashboard) */
+.op-ul li.active a::before {
+    content: "";
+    position: absolute;
+    left: -8px;
+    top: 10%;
+    height: 80%;
+    width: 4px;
+    background: #ffffff;
+    border-radius: 4px;
+}
+
+/* ===============================
+    FONT AWESOME FIX (สำคัญมาก)
+   ================================ */
+.sidebar-operator i,
+.sidebar-operator .fa-solid,
+.sidebar-operator .fas {
+    font-family: "Font Awesome 6 Free" !important;
+    font-weight: 900 !important;
+    width: 25px;
+    text-align: center;
+    font-size: 1.1rem;
+    display: inline-block;
+}
+
+/* ===============================
+    BOTTOM SECTION
+   ================================ */
+.sidebar-bottom {
+    padding: 15px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.btn-logout {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    border-radius: 10px;
+    color: #ffb4b4;
+    text-decoration: none;
+    transition: 0.25s ease;
+}
+
+.btn-logout:hover {
+    background: #ff4d4d;
+    color: #ffffff;
+}
+
+/* ===============================
+    MOBILE RESPONSIVE
+   ================================ */
+
+/* ปุ่ม Hamburger */
+.btn-hamburger {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    background: var(--accent-color);
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    cursor: pointer;
+    z-index: 2000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 992px) {
+    .btn-hamburger {
+        display: flex;
+    }
+
+    .sidebar-operator {
+        transform: translateX(-100%);
+    }
+
+    .sidebar-operator.active {
+        transform: translateX(0);
+    }
+}
