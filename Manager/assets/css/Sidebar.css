@@ -1,0 +1,187 @@
+/* ===============================
+   Manager Sidebar - Blue Theme
+   =============================== */
+
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background: linear-gradient(180deg, #0d6efd, #0a58ca);
+    color: #ffffff;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+}
+
+.sidebar-top {
+    padding: 20px;
+}
+
+.sb-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ffffff;
+}
+
+.profile-name {
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.profile-role {
+    font-size: 12px;
+    color: #cfe2ff;
+}
+
+.sb-ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 25px;
+}
+
+.sb-ul li {
+    margin-bottom: 8px;
+}
+
+/* ===============================
+   Manager Sidebar - Blue Theme
+   =============================== */
+
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background: linear-gradient(180deg, #0d6efd, #0a58ca);
+    color: #ffffff;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+}
+
+.sidebar-top {
+    padding: 20px;
+}
+
+.sb-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ffffff;
+}
+
+.profile-name {
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.profile-role {
+    font-size: 12px;
+    color: #cfe2ff;
+}
+
+.sb-ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 25px;
+}
+
+.sb-ul li {
+    margin-bottom: 8px;
+}
+
+.sb-ul li a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #e3f2fd;
+    transition: all 0.2s ease;
+}
+
+.sb-ul li a:hover {
+    background: rgba(255,255,255,0.18);
+    color: #ffffff;
+}
+
+.sidebar-bottom {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    padding: 0 20px;
+}
+
+/* ===== Logout Button - Critical Red ===== */
+
+.btn-logout {
+    background: linear-gradient(180deg, #dc3545, #b02a37);
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.btn-logout:hover {
+    background: linear-gradient(180deg, #bb2d3b, #842029);
+    color: #ffffff;
+}
+
+.main {
+    display: flex;
+}
+
+.dashboard {
+    margin-left: 250px;
+    padding: 25px;
+    width: calc(100% - 250px);
+}
+
+
+.sb-ul li a:hover {
+    background: rgba(255,255,255,0.18);
+    color: #ffffff;
+}
+
+.sidebar-bottom {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    padding: 0 20px;
+}
+
+/* ===== Logout Button - Critical Red ===== */
+
+.btn-logout {
+    background: linear-gradient(180deg, #dc3545, #b02a37);
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.btn-logout:hover {
+    background: linear-gradient(180deg, #bb2d3b, #842029);
+    color: #ffffff;
+}
+
+.main {
+    display: flex;
+}
+
+.dashboard {
+    margin-left: 250px;
+    padding: 25px;
+    width: calc(100% - 250px);
+}
