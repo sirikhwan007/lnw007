@@ -17,7 +17,6 @@ $activePage = $activePage ?? '';
         href="/factory_monitoring/Technician/assets/css/sidebar_technician.css?v=<?= time(); ?>">
 </head>
 
-
 <script src="/factory_monitoring/Technician/assets/js/SidebarOperator.js"></script>
 
 <div class="sidebar">
