@@ -36,13 +36,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     header("Location: /factory_monitoring/admin/index.php");
                     break;
                 case 'Manager':
-                    header("Location: /factory_monitoring/manager/dashboard.php");
+                    header("Location: /factory_monitoring/Manager/dashboard.php");
                     break;
                 case 'Technician':
-                    header("Location: /factory_monitoring/technician/dashboard.php");
+                    header("Location: /factory_monitoring/Technician/dashboard.php");
                     break;
                 case 'Operator':
-                    header("Location: /factory_monitoring/operator/dashboard.php");
+                    header("Location: /factory_monitoring/Operator/dashboard.php");
                     break;
                 default:
                     header("Location: /factory_monitoring/login.php");

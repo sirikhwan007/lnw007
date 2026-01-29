@@ -35,14 +35,14 @@
     background: #ffffff;
     border-radius: 14px;
     padding: 22px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
     transition: transform 0.25s, box-shadow 0.25s;
     cursor: pointer;
 }
 
 .card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
 }
 
 /* ---------- Card Icon ---------- */

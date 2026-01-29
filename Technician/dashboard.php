@@ -18,7 +18,8 @@ $username = $_SESSION['username'];
 $stats = ['pending' => 0, 'completed' => 0];
 
 // ฟังก์ชันช่วยนับจำนวนงานตามสถานะ
-function countJobs($conn, $username, $status) {
+function countJobs($conn, $username, $status)
+{
     $sql = "SELECT COUNT(*) AS count FROM repair_history WHERE username = ? AND status = ?";
     if ($stmt = $conn->prepare($sql)) {
         $stmt->bind_param("ss", $username, $status);
@@ -36,6 +37,7 @@ $stats['completed'] = countJobs($conn, $username, 'สำเร็จ');
 
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -52,17 +54,32 @@ $stats['completed'] = countJobs($conn, $username, 'สำเร็จ');
             --bg-light: #f8f9fa;
         }
 
-        body { background-color: var(--bg-light); font-family: 'Sarabun', sans-serif; }
+        body {
+            background-color: var(--bg-light);
+            font-family: 'Sarabun', sans-serif;
+        }
 
         .dashboard-container {
-            margin-left: 260px; /* เว้นที่ให้ Sidebar */
+            margin-left: 260px;
+            /* เว้นที่ให้ Sidebar */
             padding: 40px 20px;
             transition: all 0.3s ease;
         }
 
-        .dashboard-header { margin-bottom: 30px; }
-        .dashboard-title { font-size: 1.8rem; font-weight: 700; color: #333; }
-        .welcome-text { color: #666; font-size: 1.1rem; }
+        .dashboard-header {
+            margin-bottom: 30px;
+        }
+
+        .dashboard-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #333;
+        }
+
+        .welcome-text {
+            color: #666;
+            font-size: 1.1rem;
+        }
 
         /* Card Grid System */
         .card-grid {
@@ -71,7 +88,10 @@ $stats['completed'] = countJobs($conn, $username, 'สำเร็จ');
             gap: 20px;
         }
 
-        .card-link { text-decoration: none; color: inherit; }
+        .card-link {
+            text-decoration: none;
+            color: inherit;
+        }
 
         .stat-card {
             background: #fff;
@@ -81,13 +101,13 @@ $stats['completed'] = countJobs($conn, $username, 'สำเร็จ');
             align-items: center;
             gap: 20px;
             border: none;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
             transition: 0.3s transform ease, 0.3s box-shadow ease;
         }
 
         .stat-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
 
         .icon-box {
@@ -100,15 +120,38 @@ $stats['completed'] = countJobs($conn, $username, 'สำเร็จ');
             font-size: 1.5rem;
         }
 
-        .bg-pending { background: rgba(13, 110, 253, 0.1); color: var(--primary-color); }
-        .bg-success { background: rgba(25, 135, 84, 0.1); color: var(--success-color); }
-        .bg-profile { background: rgba(108, 117, 125, 0.1); color: #6c757d; }
+        .bg-pending {
+            background: rgba(13, 110, 253, 0.1);
+            color: var(--primary-color);
+        }
 
-        .stat-info h3 { font-size: 1.1rem; margin: 0; color: #555; }
-        .stat-info .job-count { font-size: 1.6rem; font-weight: 800; margin: 5px 0 0; }
+        .bg-success {
+            background: rgba(25, 135, 84, 0.1);
+            color: var(--success-color);
+        }
+
+        .bg-profile {
+            background: rgba(108, 117, 125, 0.1);
+            color: #6c757d;
+        }
+
+        .stat-info h3 {
+            font-size: 1.1rem;
+            margin: 0;
+            color: #555;
+        }
+
+        .stat-info .job-count {
+            font-size: 1.6rem;
+            font-weight: 800;
+            margin: 5px 0 0;
+        }
 
         @media (max-width: 992px) {
-            .dashboard-container { margin-left: 0; padding-top: 80px; }
+            .dashboard-container {
+                margin-left: 0;
+                padding-top: 80px;
+            }
         }
     </style>
 
@@ -123,7 +166,7 @@ $stats['completed'] = countJobs($conn, $username, 'สำเร็จ');
         <header class="dashboard-header">
             <h1 class="dashboard-title">Dashboard Technician</h1>
             <p class="welcome-text">
-                <i class="fa-regular fa-circle-user"></i> 
+                <i class="fa-regular fa-circle-user"></i>
                 สวัสดีคุณ <strong><?= htmlspecialchars($username) ?></strong> วันนี้มีงานอะไรรออยู่บ้าง?
             </p>
         </header>
@@ -174,4 +217,5 @@ $stats['completed'] = countJobs($conn, $username, 'สำเร็จ');
     </main>
 
 </body>
+
 </html>
