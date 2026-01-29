@@ -110,6 +110,7 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'Operator') {
             <div class="row">
                 </div>
         </div>
+        
     </main>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
@@ -117,7 +118,7 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'Operator') {
         document.addEventListener("DOMContentLoaded", () => {
             const sidebar = document.querySelector(".sidebar-operator");
             const btnHamburger = document.querySelector(".btn-hamburger");
-            // Toggle Sidebar
+            // ควยยยยยยยยยย
             if (btnHamburger) {
                 btnHamburger.addEventListener("click", () => {
                     sidebar.classList.toggle("active");
