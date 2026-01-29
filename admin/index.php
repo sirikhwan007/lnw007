@@ -7,7 +7,11 @@ if (!isset($_SESSION['user_id'])) {
     header("Location: /factory_monitoring/login.php");
     exit();
 }
-
+// ตรวจสิทธิ์แอดมิน
+if ($_SESSION['role'] !== 'Admin') {
+    header("Location: /factory_monitoring/login.php");
+    exit();
+}
 // ตั้งค่าหน้าปัจจุบัน
 $page = 'dashboard';
 
@@ -59,7 +63,7 @@ $recent_logs = $conn->query("SELECT * FROM logs ORDER BY created_at DESC LIMIT 1
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Factory Dashboard</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/factory_monitoring/admin/assets/css/index.css?v=2">
+    <link rel="stylesheet" href="/factory_monitoring/assets/css/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
@@ -213,9 +217,9 @@ $recent_logs = $conn->query("SELECT * FROM logs ORDER BY created_at DESC LIMIT 1
 
 
     </section>
-
+    
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="SidebarAdmin.js"></script>
+    <script src="/factory_monitoring/admin/assets/js/SidebarAdmin.js"></script>
     <script>
 $(document).ready(function () {
 

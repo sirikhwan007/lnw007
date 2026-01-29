@@ -24,8 +24,7 @@ $role = $_SESSION['role'] ?? 'ไม่ทราบสิทธิ์';
 
     <!-- CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/factory_monitoring/Manager/assets/css/Sidebar.css">
-    <link rel="stylesheet" href="/factory_monitoring/admin/assets/css/index.css">
+    <link rel="stylesheet" href="/factory_monitoring/manager/assets/css/Sidebar.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <style>

@@ -1,41 +1,50 @@
 /* ===============================
-   RESET & BASE
+   FONT & RESET
 ================================ */
-* {
-    box-sizing: border-box;
-}
+@import url("https://fonts.googleapis.com/css2?family=Sarabun:wght@400;500;600&display=swap");
 
-body {
+* {
     margin: 0;
-    font-family: "Segoe UI", Tahoma, sans-serif;
-    background: #f4f6f9;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Sarabun", sans-serif;
 }
 
 /* ===============================
-   SIDEBAR TECHNICIAN
+   THEME (ADMIN STYLE)
+================================ */
+:root {
+    --primary: #6f1e51;
+    --secondary: #8e44ad;
+    --text-main: #333;
+    --text-muted: #adadad;
+    --bg-main: #ffffff;
+    --danger: #ea2027;
+}
+
+/* ===============================
+   SIDEBAR
 ================================ */
 .sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 260px;
-    height: 100vh;
-    background: #1f2d3d; /* โทน Technician */
-    color: #ecf0f1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    z-index: 1000;
+  max-width: 250px;
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto;
+  background: #fff;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s ease;
 }
 
 /* ===============================
    TOP
 ================================ */
-.sidebar-top {
-    padding: 20px 15px;
-}
+.sidebar-top,
 
-/* ---------- Profile ---------- */
+/* ---------- PROFILE ---------- */
 .profile-btn {
     text-decoration: none;
     color: inherit;
@@ -45,30 +54,32 @@ body {
     display: flex;
     align-items: center;
     gap: 12px;
-    margin-bottom: 30px;
+    margin-bottom: 42px;   /* ระยะก่อนเมนู (สำคัญมาก) */
 }
 
 .profile-img {
-    width: 52px;
-    height: 52px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid #3498db; /* Technician = ฟ้า */
 }
 
 .profile-info {
     display: flex;
     flex-direction: column;
+    line-height: 1.2;
 }
 
 .profile-name {
+    font-size: 14px;
     font-weight: 600;
-    font-size: 15px;
+    color: var(--primary);
+    margin-bottom: 2px;
 }
 
 .profile-role {
     font-size: 12px;
-    color: #cfd9e3;
+    color: var(--text-muted);
 }
 
 /* ===============================
@@ -76,8 +87,8 @@ body {
 ================================ */
 .sb-ul {
     list-style: none;
-    padding: 0;
     margin: 0;
+    padding: 0;
 }
 
 .sb-ul li {
@@ -88,52 +99,59 @@ body {
     display: flex;
     align-items: center;
     gap: 12px;
-    padding: 12px 14px;
+    padding: 14px 20px;      /* ความสูงเท่ารูป Admin */
     border-radius: 10px;
-    color: #dce6f1;
+    color: var(--text-muted);
     text-decoration: none;
     font-size: 14px;
-    transition: all 0.25s ease;
+    line-height: 1;
+    transition: 0.25s ease;
 }
 
+.sb-ul a i {
+    font-size: 16px;
+}
+
+/* Hover */
 .sb-ul a:hover {
-    background: #3498db;
+    background: var(--secondary);
     color: #fff;
 }
 
-.sb-ul i {
-    width: 18px;
-    text-align: center;
-}
-
-/* Active (optional) */
+/* Active */
 .sb-ul a.active {
-    background: #2980b9;
+    background: var(--secondary);
     color: #fff;
+    font-weight: 600;
 }
 
 /* ===============================
    BOTTOM
 ================================ */
 .sidebar-bottom {
-    padding: 15px;
-    border-top: 1px solid rgba(255,255,255,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
+/* ---------- LOGOUT ---------- */
 .btn-logout {
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 10px;
+    background: var(--danger);
+    color: #fff;
     padding: 12px;
-    border-radius: 10px;
-    color: #ffb4b4;
+    border-radius: 12px;
     text-decoration: none;
-    transition: 0.25s;
+    font-size: 14px;
+    transition: 0.25s ease;
 }
 
 .btn-logout:hover {
-    background: #e74c3c;
-    color: #fff;
+    background: #c0392b;
 }
 
 /* ===============================

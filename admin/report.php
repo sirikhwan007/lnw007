@@ -208,7 +208,7 @@ $conn->close();
 </section>
 
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-<script src="SidebarAdmin.js"></script>
+<script src="/factory_monitoring/admin/assets/js/SidebarAdmin.js"></script>
 
 </body>
 </html>

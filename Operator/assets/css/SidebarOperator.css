@@ -1,70 +1,84 @@
 /* ===============================
-    GENERAL & FONT SETTINGS
-   ================================ */
-:root {
-    --sidebar-bg: #1e1e2f;
-    --sidebar-width: 260px;
-    --accent-color: #8e44ad;
-    --text-color: #ffffff;
-    --text-muted: #cfcfe3;
+   FONT & RESET
+================================ */
+@import url("https://fonts.googleapis.com/css2?family=Sarabun:wght@400;500;600&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Sarabun", sans-serif;
 }
 
+/* ===============================
+   THEME (ADMIN STYLE)
+================================ */
+:root {
+    --primary: #6f1e51;
+    --secondary: #8e44ad;
+    --text-main: #333;
+    --text-muted: #adadad;
+    --bg-main: #ffffff;
+    --danger: #ea2027;
+}
+
+/* ===============================
+   SIDEBAR OPERATOR
+================================ */
 .sidebar-operator {
-    font-family: "Segoe UI", Tahoma, "Kanit", sans-serif;
-    box-sizing: border-box;
     position: fixed;
     top: 0;
     left: 0;
-    width: var(--sidebar-width);
+    width: 250px;
     height: 100vh;
-    background: var(--sidebar-bg);
-    color: var(--text-color);
+    background: var(--bg-main);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    box-shadow: 2px 0 6px rgba(0,0,0,0.05);
     z-index: 1000;
     transition: transform 0.3s ease;
 }
 
 /* ===============================
-    TOP SECTION (PROFILE)
-   ================================ */
+   TOP (PROFILE)
+================================ */
 .op-top {
-    padding: 20px 15px;
+    padding: 32px 20px 0;
 }
 
 .op-profile-btn {
     text-decoration: none;
     color: inherit;
     display: block;
-    margin-bottom: 30px;
 }
 
 .op-logo {
     display: flex;
     align-items: center;
     gap: 12px;
+    margin-bottom: 42px; /* ระยะก่อนเมนู */
 }
 
 .op-profile-img {
-    width: 52px;
-    height: 52px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid var(--accent-color);
+    border: none;
 }
 
 .op-profile-info {
     display: flex;
     flex-direction: column;
+    line-height: 1.2;
 }
 
 .op-profile-name {
+    font-size: 14px;
     font-weight: 600;
-    font-size: 15px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    color: var(--primary);
+    margin-bottom: 2px;
 }
 
 .op-profile-role {
@@ -73,126 +87,89 @@
 }
 
 /* ===============================
-    MENU NAVIGATION
-   ================================ */
+   MENU
+================================ */
 .op-ul {
     list-style: none;
-    padding: 0;
     margin: 0;
+    padding: 0;
 }
 
 .op-ul li {
-    margin-bottom: 8px;
+    margin-bottom: 6px;
 }
 
 .op-ul a {
     display: flex;
     align-items: center;
     gap: 12px;
-    padding: 12px 14px;
+    padding: 14px 20px;
     border-radius: 10px;
-    color: #dcdcff;
+    color: var(--text-muted);
     text-decoration: none;
-    transition: all 0.25s ease;
-}
-
-/* hover (ไม่ทับ active) */
-.op-ul li:not(.active) a:hover {
-    background: var(--accent-color);
-    color: #ffffff;
-}
-
-/* ===============================
-    ACTIVE MENU (หน้าที่เลือกอยู่)
-   ================================ */
-.op-ul li.active a {
-    background: linear-gradient(135deg, #7b3fe4, #9b5cff);
-    color: #ffffff;
-    box-shadow: 0 6px 18px rgba(142, 68, 173, 0.4);
-    position: relative;
-}
-
-.op-ul li.active i {
-    color: #ffffff;
-}
-
-/* เส้นเน้นด้านซ้าย (สไตล์ Dashboard) */
-.op-ul li.active a::before {
-    content: "";
-    position: absolute;
-    left: -8px;
-    top: 10%;
-    height: 80%;
-    width: 4px;
-    background: #ffffff;
-    border-radius: 4px;
-}
-
-/* ===============================
-    FONT AWESOME FIX (สำคัญมาก)
-   ================================ */
-.sidebar-operator i,
-.sidebar-operator .fa-solid,
-.sidebar-operator .fas {
-    font-family: "Font Awesome 6 Free" !important;
-    font-weight: 900 !important;
-    width: 25px;
-    text-align: center;
-    font-size: 1.1rem;
-    display: inline-block;
-}
-
-/* ===============================
-    BOTTOM SECTION
-   ================================ */
-.sidebar-bottom {
-    padding: 15px;
-    border-top: 1px solid rgba(255,255,255,0.1);
-}
-
-.btn-logout {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 12px;
-    border-radius: 10px;
-    color: #ffb4b4;
-    text-decoration: none;
+    font-size: 14px;
+    line-height: 1;
     transition: 0.25s ease;
 }
 
-.btn-logout:hover {
-    background: #ff4d4d;
-    color: #ffffff;
+.op-ul a i {
+    font-size: 16px;
+    width: 20px;
+    text-align: center;
+}
+
+/* Hover */
+.op-ul a:hover {
+    background: var(--secondary);
+    color: #fff;
+}
+
+/* Active */
+.op-ul li.active a {
+    background: var(--secondary);
+    color: #fff;
+    font-weight: 600;
+    box-shadow: none;
+}
+
+.op-ul li.active a::before {
+    display: none; /* เอาเส้นซ้ายแบบเดิมออก */
 }
 
 /* ===============================
-    MOBILE RESPONSIVE
-   ================================ */
-
-/* ปุ่ม Hamburger */
-.btn-hamburger {
-    position: fixed;
-    top: 15px;
-    left: 15px;
-    background: var(--accent-color);
-    color: #fff;
-    width: 40px;
-    height: 40px;
-    display: none;
-    align-items: center;
+   BOTTOM
+================================ */
+.sidebar-bottom {
+    margin-top: auto;
+    padding: 25px 20px;
+    display: flex;
     justify-content: center;
-    border-radius: 8px;
-    cursor: pointer;
-    z-index: 2000;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-@media (max-width: 992px) {
-    .btn-hamburger {
-        display: flex;
-    }
+/* ---------- LOGOUT ---------- */
+.btn-logout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background: var(--danger);
+    color: #fff;
+    padding: 12px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.25s ease;
+    width: 100%;
+}
 
+.btn-logout:hover {
+    background: #c0392b;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 992px) {
     .sidebar-operator {
         transform: translateX(-100%);
     }

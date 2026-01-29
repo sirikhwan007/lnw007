@@ -54,10 +54,15 @@ if ($stmt) {
     <meta charset="UTF-8">
     <title>Technician Dashboard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="/factory_monitoring/Technician/assets/css/sidebar_technician.css">
     <link rel="stylesheet" href="/factory_monitoring/Technician/assets/css/dashboard_technician.css">
+
+    <!-- FontAwesome -->
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     <script src="/factory_monitoring/Technician/assets/js/sidebar_technician.js" defer></script>
 
     <style>
