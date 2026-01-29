@@ -34,7 +34,6 @@ $role         = $_SESSION['role'] ?? 'Technician';
                     </span>
                 </div>
             </div>
-
         </a>
 
         <!-- ===== MENU ===== -->
