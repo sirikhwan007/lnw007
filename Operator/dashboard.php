@@ -117,14 +117,12 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'Operator') {
         document.addEventListener("DOMContentLoaded", () => {
             const sidebar = document.querySelector(".sidebar-operator");
             const btnHamburger = document.querySelector(".btn-hamburger");
-
             // Toggle Sidebar
             if (btnHamburger) {
                 btnHamburger.addEventListener("click", () => {
                     sidebar.classList.toggle("active");
                 });
             }
-
             // Auto-active Menu
             const currentUrl = window.location.href;
             const links = document.querySelectorAll(".op-ul a");
