@@ -38,7 +38,7 @@ $uploadPath = $_SESSION['upload_path'] ?? '/factory_monitoring/manager/uploads/'
             <li>
                 <a href="/factory_monitoring/Manager/dashboard.php">
                     <i class="fas fa-chart-line fontawesome"></i>
-                    <span class="sb-text">Dashboard</span>
+                    <span class="sb-text">หน้าหลัก</span>
                 </a>
             </li>
 
